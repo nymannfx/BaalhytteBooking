@@ -47,7 +47,7 @@ namespace BaalhytteBooking
 
         public override string ToString()
         {
-            return $"ID:{ID}, Navn:{Name}, Aldersgruppe:{Aldersgruppe}, Deltagere:{AntalAfGrupper}";
+            return $"ID: {ID}, Navn: {Name}, Aldersgruppe: {Aldersgruppe}, Deltagere: {AntalAfGrupper}";
         }
     }
 }
