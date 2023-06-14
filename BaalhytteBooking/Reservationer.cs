@@ -9,7 +9,7 @@ namespace BaalhytteBooking
 {
     public class Reservationer
     {
-        public Dictionary<int, Reservation> reservation { get; set; }
+        public Dictionary<int, Reservation> reservation;
 
         #region Instance Fields
         private int _id;
@@ -23,6 +23,10 @@ namespace BaalhytteBooking
         #endregion
 
         #region Properties
+        public Dictionary<int, Reservation> Reservations
+        {
+            get { return reservation; }
+        }
         public int Id { get { return _id; } set { _id = value; } }
         #endregion
 
@@ -30,16 +34,18 @@ namespace BaalhytteBooking
 
         public void RegistrerReservation(Reservation reservation)
         {
+            Reservations.Add(reservation.ID, reservation);
         }
 
         public void FjernReservation(Reservation reservation)
         {
-
+            Reservations.Remove(reservation.ID);
         }
 
         public void PrintReservationer()
         {
-            Console.WriteLine();
+            foreach(var r in Reservations)
+                Console.WriteLine(r);
         }
 
         #endregion

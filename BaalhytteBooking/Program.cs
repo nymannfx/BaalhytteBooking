@@ -20,3 +20,11 @@ Reservation r2 = new Reservation(4, new DateTime().AddHours(8).AddMinutes(40), b
 Console.WriteLine(r1);
 Console.WriteLine(r2);
 Console.WriteLine("________________________________________________________________________________________");
+
+Console.WriteLine("Opgave 6");
+Console.WriteLine("Test CRUD");
+
+Reservationer rs1 = new Reservationer();
+rs1.RegistrerReservation(r1);
+rs1.RegistrerReservation(r2);
+rs1.PrintReservationer();
